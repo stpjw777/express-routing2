@@ -2,4 +2,12 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  form(action='/login/check' method= 'post')
+    p 
+      |아이디
+      input(type='text' name='id')
+    p 
+      |비밀번호
+      input(type='password' name='pw')
+    input(type='submit' value='로그인')
+        
